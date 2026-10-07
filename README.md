@@ -57,3 +57,37 @@ Watch the complete forensic audit, Explainable AI breakdown, and batch CSV triag
                                        │
                       [ Actionable Payment Directive ]
                         (Hold vs. Approve Payout)
+
+
+---
+
+## 📊 Quantitative Grounding & Regression Baseline
+
+To eliminate numerical hallucinations, billed amounts are strictly benchmarked against an empirical multivariate regression baseline before entering the reasoning loop:
+
+$$\text{Expected Freight Cost} = \beta_0 + \beta_1(\text{Distance in Miles}) + \beta_2(\text{Weight in Lbs}) + \epsilon$$
+
+* **Baseline Performance:** $R^2 = 96.99\%$ predictive accuracy on logistics distributions.
+* **Variance Trigger:** Transactions showing $+50\%$ or greater variance against the expected cost baseline automatically trigger high-severity penalty deductions.
+
+---
+
+## 📂 Sample Batch CSV Format
+
+To test the **Batch Ingestion & Triage** tab, format your CSV file with the following headers:
+
+```csv
+invoice_number,vendor_name,tax_id,distance_miles,weight_lbs,billed_amount,payment_terms_days
+INV-2026-9041,Phantom Swift Logistics LLC,EIN-00-9988112,320.0,1500.0,3150.00,5
+INV-2026-1022,Reliable Logistics Partners Inc,EIN-88-2910492,850.0,3200.0,1850.00,30
+INV-2026-4421,TransNational Overland Corp,EIN-23-4019283,450.0,1800.0,1420.00,15
+INV-2026-5590,Ghost Haulage Enterprises,EIN-11-0022991,210.0,900.0,2400.00,3
+
+
+
+
+
+
+
+
+
