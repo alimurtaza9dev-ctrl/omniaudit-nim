@@ -58,9 +58,6 @@ Watch the complete forensic audit, Explainable AI breakdown, and batch CSV triag
                       [ Actionable Payment Directive ]
                         (Hold vs. Approve Payout)
 
-
----
-
 ## 📊 Quantitative Grounding & Regression Baseline
 
 To eliminate numerical hallucinations, billed amounts are strictly benchmarked against an empirical multivariate regression baseline before entering the reasoning loop:
@@ -82,6 +79,9 @@ INV-2026-9041,Phantom Swift Logistics LLC,EIN-00-9988112,320.0,1500.0,3150.00,5
 INV-2026-1022,Reliable Logistics Partners Inc,EIN-88-2910492,850.0,3200.0,1850.00,30
 INV-2026-4421,TransNational Overland Corp,EIN-23-4019283,450.0,1800.0,1420.00,15
 INV-2026-5590,Ghost Haulage Enterprises,EIN-11-0022991,210.0,900.0,2400.00,3
+```
+
+---
 
 ## 🚀 Quickstart & Local Installation
 
@@ -93,51 +93,57 @@ INV-2026-5590,Ghost Haulage Enterprises,EIN-11-0022991,210.0,900.0,2400.00,3
 ### 1. Clone & Set Up Environment
 
 ```bash
-git clone [https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git](https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git)
+git clone https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git
 cd omniaudit-nim
 python -m venv venv
+```
 
-Activate the virtual environment:
+**Activate the virtual environment:**
 
-Windows (PowerShell):
+* **Windows (PowerShell):**
+  ```powershell
+  .\venv\Scripts\Activate.ps1
+  ```
+* **macOS / Linux:**
+  ```bash
+  source venv/bin/activate
+  ```
 
-PowerShell
-.\venv\Scripts\Activate.ps1
-macOS / Linux:
+### 2. Install Dependencies
 
-Bash
-source venv/bin/activate
-2. Install Dependencies
-Bash
+```bash
 pip install -r requirements.txt
-3. Configure API Credentials
-Create a .env file in the root directory:
+```
 
-Code snippet
+### 3. Configure API Credentials
+
+Create a `.env` file in the root directory:
+
+```env
 TAVILY_API_KEY="your-tavily-api-key"
 NVIDIA_API_KEY="your-nvidia-api-key"
-4. Launch the Streamlit Dashboard
-Bash
+```
+
+### 4. Launch the Streamlit Dashboard
+
+```bash
 streamlit run app.py
-The application will launch locally at http://localhost:8501.
+```
 
-🛠️ Tech Stack
-Framework & Frontend: Streamlit, Pandas, NumPy
+The application will launch locally at `http://localhost:8501`.
 
-Machine Learning: Scikit-Learn (Multivariate Linear Regression)
+---
 
-Real-Time Web Intelligence: Tavily Search API
+## 🛠️ Tech Stack
 
-Concurrency: Python concurrent.futures.ThreadPoolExecutor
+* **Framework & Frontend:** Streamlit, Pandas, NumPy
+* **Machine Learning:** Scikit-Learn (Multivariate Linear Regression)
+* **Real-Time Web Intelligence:** Tavily Search API
+* **Concurrency:** Python `concurrent.futures.ThreadPoolExecutor`
+* **Agentic Synthesis:** NVIDIA NIM Microservices, Google GenAI SDK
 
-Agentic Synthesis: NVIDIA NIM Microservices, Google GenAI SDK
+---
 
-📄 License
-This project is open-source under the MIT License.
+## 📄 License
 
-
-
-
-
-
-
+This project is open-source under the [MIT License](LICENSE).
