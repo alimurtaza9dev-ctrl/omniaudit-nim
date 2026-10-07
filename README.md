@@ -83,6 +83,19 @@ INV-2026-1022,Reliable Logistics Partners Inc,EIN-88-2910492,850.0,3200.0,1850.0
 INV-2026-4421,TransNational Overland Corp,EIN-23-4019283,450.0,1800.0,1420.00,15
 INV-2026-5590,Ghost Haulage Enterprises,EIN-11-0022991,210.0,900.0,2400.00,3
 
+## 🚀 Quickstart & Local Installation
+
+### Prerequisites
+* Python 3.10+
+* Tavily API Key
+* NVIDIA NIM / LLM API Key
+
+### 1. Clone & Set Up Environment
+
+```bash
+git clone [https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git](https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git)
+cd omniaudit-nim
+python -m venv venv
 
 
 
