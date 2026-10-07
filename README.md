@@ -97,6 +97,43 @@ git clone [https://github.com/alimurtaza9dev-ctrl/omniaudit-nim.git](https://git
 cd omniaudit-nim
 python -m venv venv
 
+Activate the virtual environment:
+
+Windows (PowerShell):
+
+PowerShell
+.\venv\Scripts\Activate.ps1
+macOS / Linux:
+
+Bash
+source venv/bin/activate
+2. Install Dependencies
+Bash
+pip install -r requirements.txt
+3. Configure API Credentials
+Create a .env file in the root directory:
+
+Code snippet
+TAVILY_API_KEY="your-tavily-api-key"
+NVIDIA_API_KEY="your-nvidia-api-key"
+4. Launch the Streamlit Dashboard
+Bash
+streamlit run app.py
+The application will launch locally at http://localhost:8501.
+
+🛠️ Tech Stack
+Framework & Frontend: Streamlit, Pandas, NumPy
+
+Machine Learning: Scikit-Learn (Multivariate Linear Regression)
+
+Real-Time Web Intelligence: Tavily Search API
+
+Concurrency: Python concurrent.futures.ThreadPoolExecutor
+
+Agentic Synthesis: NVIDIA NIM Microservices, Google GenAI SDK
+
+📄 License
+This project is open-source under the MIT License.
 
 
 
